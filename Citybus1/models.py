@@ -1,0 +1,43 @@
+from django.db import models
+class Admin(models.Model):
+	log = models.CharField(max_length=20)
+	pas = models.CharField(max_length=20)
+	nam = models.CharField(max_length=20)
+	sur = models.CharField(max_length=20)
+	age = models.PositiveIntegerField()
+class User(models.Model):
+	log = models.CharField(max_length=20)
+	pas = models.CharField(max_length=20)
+	nam = models.CharField(max_length=20)
+	sur = models.CharField(max_length=20)
+	fac = models.CharField(max_length=20)
+	age = models.PositiveIntegerField()
+class Bus(models.Model):
+	num = models.CharField(max_length=8)
+	mar = models.CharField(max_length=20)
+	mod = models.CharField(max_length=20)
+	yea = models.PositiveIntegerField()
+	sea = models.PositiveIntegerField()
+	cap = models.PositiveIntegerField()
+	path = models.CharField(max_length=20)
+class Driver(models.Model):
+	log = models.CharField(max_length=20)
+	pas = models.CharField(max_length=20)
+	nam = models.CharField(max_length=20)
+	sur = models.CharField(max_length=20)
+	age = models.PositiveIntegerField()
+	cla = models.PositiveIntegerField()
+	path = models.CharField(max_length=20)
+class Schedule(models.Model):
+	sou = models.CharField(max_length=30)
+	des = models.CharField(max_length=30)
+	dep = models.CharField(max_length=20)
+	arr = models.CharField(max_length=20)
+	pri = models.PositiveIntegerField()
+	bus = models.ForeignKey(Bus, on_delete = models.CASCADE)
+	dri = models.ForeignKey(Driver, on_delete = models.CASCADE)
+class Ticket(models.Model):
+	sch = models.ForeignKey(Schedule, on_delete = models.CASCADE)
+	sea = models.PositiveIntegerField()
+	ocu = models.BooleanField()
+	hol = models.ForeignKey(User, on_delete = models.CASCADE)

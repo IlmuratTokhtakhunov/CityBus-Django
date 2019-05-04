@@ -1,0 +1,320 @@
+<!doctype html>
+{% load staticfiles %}
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>CityBus</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       <link rel="icon" type="image/png" href="{% static "images/bus.png" %}">
+
+        <!--Google Font link-->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+		<style>
+		.zero th{
+		padding-right: 15px;
+		}
+		.zero td{
+		padding-right: 15px;
+		}
+		.zero1 th{
+		padding-right: 15px;
+		}
+		.zero1 td{
+		padding-right: 15px;
+		}
+		</style>
+
+        <link rel="stylesheet" href="{% static "css/slick/slick.css" %}"> 
+        <link rel="stylesheet" href="{% static "css/slick/slick-theme.css" %}">
+        <link rel="stylesheet" href="{% static "css/animate.css" %}">
+        <link rel="stylesheet" href="{% static "css/iconfont.css" %}"
+        <link rel="stylesheet" href="{% static "css/font-awesome.min.css" %}">
+        <link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
+        <link rel="stylesheet" href="{% static "css/magnific-popup.css" %}">
+        <link rel="stylesheet" href="{% static "css/bootsnav.css" %}">
+
+        <!-- xsslider slider css -->
+
+
+        <!--<link rel="stylesheet" href="assets/css/xsslider.css">-->
+
+
+
+
+        <!--For Plugins external css-->
+        <!--<link rel="stylesheet" href="assets/css/plugins.css" />-->
+
+        <!--Theme custom css -->
+        <link rel="stylesheet" href="{% static "css/style.css" %}">
+        <!--<link rel="stylesheet" href="assets/css/colors/maron.css">-->
+
+        <!--Theme Responsive css-->
+        <link rel="stylesheet" href="{% static "css/responsive.css" %}" />
+
+        <script src="{% static "js/vendor/modernizr-2.8.3-respond-1.4.2.min.js" %}"></script>
+    </head>
+
+    <body data-spy="scroll" data-target=".navbar-collapse">
+
+
+        <!-- Preloader -->
+        <div id="loading">
+            <div id="loading-center">
+                <div id="loading-center-absolute">
+                    <div class="object" id="object_one"></div>
+                    <div class="object" id="object_two"></div>
+                    <div class="object" id="object_three"></div>
+                    <div class="object" id="object_four"></div>
+                </div>
+            </div>
+        </div><!--End off Preloader -->
+
+
+        <div class="culmn">
+            <!--Home page style-->
+
+
+            <nav class="navbar navbar-default bootsnav navbar-fixed">
+                
+
+                <!-- Start Top Search -->
+                <div class="top-search">
+                    <div class="container">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                            <input type="text" class="form-control" placeholder="Search">
+                            <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Top Search -->
+
+
+                <div class="container"> 
+                    <div class="attr-nav">
+                        <ul>
+                            <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
+                        </ul>
+                    </div> 
+
+                    <!-- Start Header Navigation -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <a class="navbar-brand" href="#brand">
+                            <img src="{% static "images/logo.png" %}" style="margin-top: 7px; height: 30px; width:180px;" class="logo" alt="">
+                            <!--<img src="assets/images/footer-logo.png" class="logo logo-scrolled" alt="">-->
+                        </a>
+
+                    </div>
+                    <!-- End Header Navigation -->
+
+                    <!-- navbar menu -->
+                    <div class="collapse navbar-collapse" id="navbar-menu">
+                        <ul class="nav navbar-nav navbar-right">
+							<li><a href="" style="margin-top: 7px;">PROFILE</a></li>                    
+                            <li><a href="/user/book" style="margin-top: 7px;">BOOK TICKET TO TRIP</a></li>
+							<li><a href="/user/viewBT" style="margin-top: 7px;">MY TICKETS</a></li>
+							<li style="margin-left: 30px; text-align: center;"><a href="\logout" style="color: #00a885;"><p style="line-height: 0.5rem;">User: {{us.nam}}</p>
+							<p style="line-height: 0.5rem;">Logout</p></a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div> 
+
+            </nav>
+
+            <!--Home Sections-->
+
+            <section id="home" class="home bg-black fix">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="main_home text-center">
+                            <div class="hello_slid">
+                                    <div class="slid_item">
+                                        <div class="home_text ">
+                                            <h2 class="text-white">Welcome to <strong>CityBus</strong></h2>
+                                            <h1 class="text-white">We Help You To Book Tickets For Trip</h1>
+                                            <h3 class="text-white">- We Make Distances <strong>Shorter</strong> Between People -</h3>
+                                        </div>
+
+                                    </div><!-- End off slid item -->
+                                    <div class="slid_item">
+                                        <div class="home_text ">
+                                            <h2 class="text-white">Welcome to <strong>CityBus</strong></h2>
+                                            <h1 class="text-white">We Inform You About Buses Routes</h1>
+                                            <h3 class="text-white">- Waiting Become <strong>Smaller</strong> With Us -</h3>
+                                        </div>
+                                    </div><!-- End off slid item -->
+                                    <div class="slid_item">
+                                        <div class="home_text ">
+                                            <h2 class="text-white">Welcome to <strong>CityBus</strong></h2>
+                                            <h1 class="text-white">We Will Help You To Save Your Money On Trips</h1>
+                                            <h3 class="text-white">- Every Road Trip Will Be <strong>Brighter</strong> Using Our Service -</h3>
+                                        </div>
+                                    </div><!-- End off slid item -->
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div><!--End off row-->
+                </div><!--End off container -->
+            </section> <!--End off Home Sections-->
+            <section id="features" class="features" style="margin-bottom: 150px;">
+                <div class="container">
+                    <div class="row">
+						<h2 style="text-align: center; padding-bottom: 40px; padding-top: 100px;">SEARCH</h2>
+						<input type="text" id="kes" oninput="chunga()" style="width: 500px; margin-bottom: 30px; margin-left: 325px; font-size: 30px;">
+						<div class="home_btn" style="font-size: 17px;">
+							{% for s in zipo %}
+							<a href="findz/?sch={{s.id}}" >
+							<div id="saf{{s.id}}" class = "sed1" style="display: inline-block; padding: 30px; border: 1px solid #ccc!important; border-radius: 20px; margin-bottom: 20px; width: 100%;">
+							<h2 id="sou{{s.id}}" style="color: #00a885">Source Location: {{s.sou}}</h2>
+							<h2 id="des{{s.id}}" style="color: #00a885">Destination Location: {{s.des}}</h2>
+							<h3 id="dep{{s.id}}">Leaving Time: {{s.dep}}</h3>
+							<h3 id="arr{{s.id}}">Arrival Time: {{s.arr}}</h3>
+							<h3 id="pri{{s.id}}">Price: {{s.pri}}</h3>
+							<div style="float: left; margin-left: 180px; margin-right: 20px;">
+							<img src={% static s.bus.path %} style="float: left; padding: 12px; height: 170px;"/>
+							<h3 id="bus{{s.id}}">Bus: {{s.bus.mar}}, {{s.bus.mod}}</h3>
+							</div>
+							<div style="text-align: center;">
+							<img src={% static s.dri.path %} style="padding: 12px; height: 170px;"/>
+							<h3 id="dri{{s.id}}">Driver: {{ s.dri.nam}} {{ s.dri.sur}}</h3>
+							</div>
+							</div>
+							</a>
+							{% endfor %}
+							</div>
+                    </div><!-- End off row -->
+                </div><!-- End off container -->
+            </section><!-- End off Featured Section-->
+           
+
+            <footer id="contact" class="footer action-lage bg-black p-top-80">
+                <!--<div class="action-lage"></div>-->
+                <div class="container">
+                    <div class="row">
+                        <div class="widget_area">
+                            <div class="col-md-3" style="margin-left: 200px;">
+                                <div class="widget_item widget_about" style="width: 330px">
+                                    <h5 class="text-white">About Us</h5>
+                                    <p class="m-top-20">We transportation company, providing qualitative service
+									on online platform, we Suggest the most profitable and modern 
+									decisions in field of logistic</p>
+                                    <div class="widget_ab_item m-top-30">
+                                        <div class="item_icon"><i class="fa fa-location-arrow"></i></div>
+                                        <div class="widget_ab_item_text">
+                                            <h6 class="text-white">Location</h6>
+                                            <p>Manasa, 34/1, 050040
+											Almaty,
+                                            Republic of Kazakhstan</p>
+                                        </div>
+                                    </div>
+                                    <div class="widget_ab_item m-top-30">
+                                        <div class="item_icon"><i class="fa fa-phone"></i></div>
+                                        <div class="widget_ab_item_text">
+                                            <h6 class="text-white">Phone :</h6>
+                                            <p>+7 (727) 462 57 45</p>
+                                        </div>
+                                    </div>
+                                    <div class="widget_ab_item m-top-30">
+                                        <div class="item_icon"><i class="fa fa-envelope-o"></i></div>
+                                        <div class="widget_ab_item_text">
+                                            <h6 class="text-white">Email Address :</h6>
+                                            <p>CityBus@gmail.com</p>
+                                        </div>
+                                    </div>
+                                </div><!-- End off widget item -->
+                            </div><!-- End off col-md-3 -->
+
+                           
+                            <div class="col-md-3">
+                                <div class="widget_item widget_newsletter sm-m-top-50" style="margin-left: 200px; width: 110%;">
+                                    <h5 class="text-white">Newsletter</h5>
+                                    <form class="form-inline m-top-30">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" placeholder="Enter you Email">
+                                        </div>
+
+                                    </form>
+                                    <div class="widget_brand m-top-40">
+                                        <a href="" class="text-uppercase" style="color: #00a885;">CYTIBUS</a>
+                                        <p style="color: #00a885;">Connecting people</p>
+                                    </div>
+                                    <ul class="list-inline m-top-20">
+               
+                                    </ul>
+
+                                </div><!-- End off widget item -->
+                            </div><!-- End off col-md-3 -->
+                        </div>
+                    </div>
+                </div>
+                <div class="main_footer fix bg-mega text-center p-top-40 p-bottom-30 m-top-80">
+                    <div class="col-md-12">
+                        <p class="wow fadeInRight" data-wow-duration="1s">
+                            Made with Love
+                            <i class="fa fa-heart"></i>
+                            by 
+                            <a target="_blank" href="http://bootstrapthemes.co">Bootstrap Themes</a> 
+                            2016. All Rights Reserved
+                        </p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <!-- JS includes -->
+
+        <script src="{% static "js/vendor/jquery-1.11.2.min.js" %}"></script>
+        <script src="{% static "js/vendor/bootstrap.min.js" %}"></script>
+
+        <script src="{% static "js/owl.carousel.min.js" %}"></script>
+        <script src="{% static "js/jquery.magnific-popup.js" %}"></script>
+        <script src="{% static "js/jquery.easing.1.3.js" %}"></script>
+        <script src="{% static "css/slick/slick.js" %}"></script>
+        <script src="{% static "css/slick/slick.min.js" %}"></script>
+        <script src="{% static "js/jquery.collapse.js" %}"></script>
+        <script src="{% static "js/bootsnav.js" %}"></script>
+
+		<script>
+		function chunga(){
+			var zuk = document.getElementById("kes").value.toLowerCase();
+			var sou;
+			var des;
+			var dep;
+			var arr;
+			var dri;
+			var bus;
+			var pri;
+			{% for u in zipo %}
+			sou = document.getElementById("sou{{u.id}}").innerHTML.toLowerCase();
+			des = document.getElementById("des{{u.id}}").innerHTML.toLowerCase();
+			dep = document.getElementById("dep{{u.id}}").innerHTML.toLowerCase();
+			arr = document.getElementById("arr{{u.id}}").innerHTML.toLowerCase();
+			dri = document.getElementById("dri{{u.id}}").innerHTML.toLowerCase();
+			bus = document.getElementById("bus{{u.id}}").innerHTML.toLowerCase();
+			pri = document.getElementById("pri{{u.id}}").innerHTML.toLowerCase();
+			if (sou.indexOf(zuk)!= -1||des.indexOf(zuk)!= -1||dep.indexOf(zuk)!= -1||arr.indexOf(zuk)!= -1||dri.indexOf(zuk)!= -1||bus.indexOf(zuk)!= -1||pri.indexOf(zuk)!= -1){
+				document.getElementById("saf{{u.id}}").style.display = "inline-block";
+			}
+			else{
+				document.getElementById("saf{{u.id}}").style.display = "none";
+			}
+			{% endfor %}
+		}
+		</script>
+
+        <script src="{% static "js/plugins.js" %}"></script>
+        <script src="{% static "js/main.js" %}"></script>
+
+    </body>
+</html>
